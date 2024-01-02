@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ChrisReedIO\HealthNoteSDK\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class HealthNoteSDKCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-healthnote-sdk';
 
     public $description = 'My command';
 
