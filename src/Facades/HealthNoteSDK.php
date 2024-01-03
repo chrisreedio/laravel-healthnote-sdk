@@ -5,12 +5,12 @@ namespace ChrisReedIO\HealthNoteSDK\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \ChrisReedIO\HealthNoteSDK\HealthNoteSDK
+ * @see \ChrisReedIO\HealthNoteSDK\HealthNoteConnector
  */
 class HealthNoteSDK extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
-        return \ChrisReedIO\HealthNoteSDK\HealthNoteSDK::class;
+        return \ChrisReedIO\HealthNoteSDK\HealthNoteConnector::class;
     }
 }

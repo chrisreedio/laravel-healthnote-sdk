@@ -17,9 +17,9 @@ class HealthNoteSDKServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-healthnote-sdk')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-healthnote-sdk_table')
+            ->hasConfigFile('healthnote-sdk')
+            // ->hasViews()
+            // ->hasMigration('create_laravel-healthnote-sdk_table')
             ->hasCommand(HealthNoteSDKCommand::class);
     }
 }
