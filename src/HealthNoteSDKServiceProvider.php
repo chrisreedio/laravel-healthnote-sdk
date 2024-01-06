@@ -2,9 +2,9 @@
 
 namespace ChrisReedIO\HealthNoteSDK;
 
+use ChrisReedIO\HealthNoteSDK\Commands\HealthNoteSDKCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ChrisReedIO\HealthNoteSDK\Commands\HealthNoteSDKCommand;
 
 class HealthNoteSDKServiceProvider extends PackageServiceProvider
 {

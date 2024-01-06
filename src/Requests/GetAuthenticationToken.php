@@ -4,9 +4,9 @@ namespace ChrisReedIO\HealthNoteSDK\Requests;
 
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
-use Saloon\Http\Request;
 use Saloon\Http\SoloRequest;
 use Saloon\Traits\Body\HasJsonBody;
+
 use function config;
 
 class GetAuthenticationToken extends SoloRequest implements HasBody
@@ -16,7 +16,7 @@ class GetAuthenticationToken extends SoloRequest implements HasBody
     protected Method $method = Method::PUT;
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function resolveEndpoint(): string
     {
@@ -25,7 +25,7 @@ class GetAuthenticationToken extends SoloRequest implements HasBody
             throw new \Exception('HealthNoteSDK base_url not set');
         }
 
-        return $baseUrl . '/auth/apikey';
+        return $baseUrl.'/auth/apikey';
     }
 
     protected function defaultBody(): array
