@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": "^8.1",
+        "chrisreedio/saloon-webhook-plugin": "dev-dev",
         "illuminate/contracts": "^10.0",
         "saloonphp/cache-plugin": "^3.0",
         "saloonphp/laravel-plugin": "^3.0",
@@ -83,5 +84,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/home/chris/dev/chrisreedio/packages/saloon/saloon-webhook-plugin"
+        }
+    ]
 }
