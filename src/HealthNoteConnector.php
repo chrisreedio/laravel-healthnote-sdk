@@ -6,7 +6,6 @@ use ChrisReedIO\HealthNoteSDK\Requests\GetAuthenticationToken;
 use Illuminate\Support\Facades\Cache;
 use Saloon\Exceptions\OAuthConfigValidationException;
 use Saloon\Http\Auth\HeaderAuthenticator;
-use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
 use Saloon\Traits\Auth\AuthenticatesRequests;
 use Saloon\Traits\Plugins\AcceptsJson;
@@ -42,7 +41,7 @@ class HealthNoteConnector extends Connector
         try {
             $savedToken = Cache::get('healthnote.token');
 
-            if (!$savedToken) {
+            if (! $savedToken) {
                 // Fetch a new token
                 $session = (new GetAuthenticationToken())->send()->json('session');
                 $token = $session['token'];

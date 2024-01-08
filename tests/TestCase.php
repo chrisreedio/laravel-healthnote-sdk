@@ -2,9 +2,9 @@
 
 namespace ChrisReedIO\HealthNoteSDK\Tests;
 
+use ChrisReedIO\HealthNoteSDK\HealthNoteSDKServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ChrisReedIO\HealthNoteSDK\HealthNoteSDKServiceProvider;
 
 class TestCase extends Orchestra
 {
