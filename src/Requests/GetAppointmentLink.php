@@ -21,8 +21,7 @@ class GetAppointmentLink extends Request
         protected string $patient_id,
         protected string $appointment_id,
         protected bool $searchAccountNamespace = true
-    ) {
-    }
+    ) {}
 
     public function defaultQuery(): array
     {

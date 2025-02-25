@@ -20,8 +20,7 @@ class GetAppointmentMessages extends Request
     public function __construct(
         protected string $patient_id,
         protected string $appointment_id
-    ) {
-    }
+    ) {}
 
     public function defaultQuery(): array
     {

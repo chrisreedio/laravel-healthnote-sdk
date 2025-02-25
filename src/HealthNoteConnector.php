@@ -10,7 +10,6 @@ use Saloon\Http\Auth\HeaderAuthenticator;
 use Saloon\Http\Connector;
 use Saloon\Traits\Auth\AuthenticatesRequests;
 use Saloon\Traits\Plugins\AcceptsJson;
-
 use Throwable;
 
 use function now;
@@ -33,10 +32,7 @@ class HealthNoteConnector extends Connector
         return $baseUrl.'/api';
     }
 
-    public function __construct()
-    {
-
-    }
+    public function __construct() {}
 
     protected function defaultAuth(): HeaderAuthenticator
     {
@@ -46,7 +42,7 @@ class HealthNoteConnector extends Connector
 
             if (! $savedToken) {
                 // Fetch a new token
-                $session = (new GetAuthenticationToken())->send()->json('session');
+                $session = (new GetAuthenticationToken)->send()->json('session');
                 $token = $session['token'];
                 $ttl = now()->diff($session['expiresAt']);
                 Cache::put('healthnote.token', $token, $ttl);
