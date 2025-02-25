@@ -4,11 +4,14 @@ namespace ChrisReedIO\HealthNoteSDK;
 
 use ChrisReedIO\HealthNoteSDK\Requests\GetAuthenticationToken;
 use Illuminate\Support\Facades\Cache;
+use ReflectionException;
 use Saloon\Exceptions\OAuthConfigValidationException;
 use Saloon\Http\Auth\HeaderAuthenticator;
 use Saloon\Http\Connector;
 use Saloon\Traits\Auth\AuthenticatesRequests;
 use Saloon\Traits\Plugins\AcceptsJson;
+
+use Throwable;
 
 use function now;
 
@@ -54,7 +57,7 @@ class HealthNoteConnector extends Connector
             return new HeaderAuthenticator($savedToken, 'session_token');
             // $this->authenticate($authenticator);
         } catch (ReflectionException|OAuthConfigValidationException|Throwable $e) {
-            throw new \Exception('Athena SDK failed to authenticate: '.$e->getMessage());
+            throw new \Exception('HealthNote SDK failed to authenticate: '.$e->getMessage());
         }
 
     }
